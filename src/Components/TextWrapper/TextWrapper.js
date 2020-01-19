@@ -6,8 +6,8 @@ const textWrapper = props => {
     let style = classes[props.type];
     return (
         <div className={style}>
-            <h1> {props.Heading} </h1>
-            <p> {props.Body} </p>
+            {props.Heading}
+            {props.Body}
         </div>
     );
 }

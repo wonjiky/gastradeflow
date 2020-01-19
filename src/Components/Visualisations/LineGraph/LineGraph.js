@@ -2,23 +2,27 @@ import React from 'react';
 import { LineChart, YAxis, XAxis, Line, Tooltip  } from 'recharts'
 import classes from './LineGraph.module.css';
 import Selector from '../../Selector/Selector';
-
+import ExitEntrySelector from '../../Selector/ExitEntrySelector/ExitEntrySelector';
 
 const lineGraph = props => {
-    const { options, defaultValue, selectorValue, data } = props;
+    const { options, defaultValue, selectorValue, data, exitEnterValue } = props;
     let lineChart = (
-        <LineChart width={500} height={140} data={data}
-            margin={{top: 0, right: 20, left: 20, bottom: 10}}
+        <LineChart width={480} height={200} data={data}
+            margin={{top: 10, right: 20, left: 20, bottom: 10}}
             >
-            <XAxis tick={{fontSize: '10px'}} dataKey={'year'} />
+            <XAxis strokeWidth="1px" stroke={'black'} tick={{fontSize: '11px'}} dataKey={'year'} />
             <YAxis hide={true}tick={{fontSize: '12px'}} type="number" domain={[0, 'dataMax']} />
-            <Tooltip content={renderTooltip} />
-            <Line type="monotone" dataKey="value" strokeWidth="2px" stroke={'gray'} activeDot={{r: 8}}/>
+            <Tooltip cursor={{ strokeWidth: 0 }} content={renderTooltip} />
+            <Line type="monotone" dataKey="value" strokeWidth="2px" stroke={'black'} fill="mediumspringgreen" activeDot={{r: 8}}/>
         </LineChart>
     )
 
     return (
         <div className={classes.LineGraph}>
+            <ExitEntrySelector 
+                exitEntryHandler={props.exitEntryHandler}
+                value={exitEnterValue}
+                />
             <Selector 
                 options={options} 
                 defaultValue={defaultValue}

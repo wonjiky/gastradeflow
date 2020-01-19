@@ -1,3 +1,5 @@
 .Selector {
-    
+    margin: 10px;
+    margin-bottom: 30px;
+    box-sizing:border-box;
 }

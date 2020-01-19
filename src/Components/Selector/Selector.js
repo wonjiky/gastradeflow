@@ -6,7 +6,7 @@ import classes from './Selector.module.css';
 const selector = props => {
     return (
         <Select 
-            // className={classes.Selector}
+            className={classes.Selector}
             isClearable={props.isClearable}
             // styles={styled}
             isSearchable={props.searchable}
@@ -15,16 +15,16 @@ const selector = props => {
             // defaultValue={props.defaultValue}
             onChange={props.handler}
             options={props.options}
-            // theme={theme => ({
-            // ...theme,
-            // borderRadius: 0,
-            // colors: {
-            //     ...theme.colors,
-            //     primary25: '#e3e3e3',
-            //     primary50: '#449999',
-            //     primary: '#449999',
-            // },
-            // })}
+            theme={theme => ({
+                ...theme,
+                borderRadius: 0,
+                colors: {
+                  ...theme.colors,
+                  primary25: '#e3e3e3',
+                  primary50: '#449999',
+                  primary: '#449999',
+                },
+              })}
         />
     )
 }

@@ -1,10 +1,9 @@
 .Chord {
     display: flex;
     flex-flow: column;
-    width: 30%;
+    width: 100%;
 }
 .Line {
     display: flex;
-    flex-flow: column;
-    width: 30%;
+    width: 500px;
 }

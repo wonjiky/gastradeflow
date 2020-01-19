@@ -50,19 +50,18 @@ class ChordContainer extends React.Component {
 
         return (
             <ContainerLayout>
-                <TextWrapper 
-                    type="Chord"
-                    />
                 <VizWrapper type="Chord">
-                    {chordDiagram}
-                    <TimeSlider 
-                        from={from} 
-                        to={to}  
-                        width={"100%"}
-                        height={30}
-                        margin={16}
-                        pushParams={this.sliderChange}
-                    />
+                    <div>
+                        {chordDiagram}
+                        <TimeSlider 
+                            from={from} 
+                            to={to}  
+                            width={"100%"}
+                            height={30}
+                            margin={16}
+                            pushParams={this.sliderChange}
+                        />
+                    </div>
                 </VizWrapper>
             </ContainerLayout>
         )
