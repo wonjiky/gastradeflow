@@ -5,13 +5,16 @@ import ContainerLayout from '../../hoc/ContainerLayout/ContainerLayout';
 import TimeSlider from '../../Components/TimeSlider/TimeSlider';
 import TextWrapper from '../../Components/TextWrapper/TextWrapper';
 import VizWrapper from '../../Components/Visualisations/VizWrapper/VizWrapper'
+import classes from './ChordContainer.module.css';
 
 class ChordContainer extends React.Component {
 
     state = {
         data: [],
         from: 2019,
-        to: 2019
+        to: 2019,
+        exitEnterValue: "entry"
+
     }
 
     // componentDidMount() {
@@ -27,6 +30,11 @@ class ChordContainer extends React.Component {
     //         })
     // }
 
+    exitEntryHandler = e => {
+
+        this.setState({ exitEnterValue: e.target.value})
+    }
+
     sliderChange = e => {
         this.setState({
             from: e[0],
@@ -36,14 +44,16 @@ class ChordContainer extends React.Component {
 
     render(){
 
-        const { data } = this.props, { from, to } = this.state;
+        const { data } = this.props, { from, to, exitEnterValue } = this.state;
         let chordDiagram = null;
         if ( this.props.data.length !== 0 ) {
             chordDiagram = (
                 <ChordDiagram
                     data={data}
                     from={from}
-                    to={to}                
+                    to={to}
+                    exitEntryHandler={this.exitEntryHandler}                
+                    exitEnterValue={exitEnterValue}
                 />
                 );
         }
@@ -54,8 +64,8 @@ class ChordContainer extends React.Component {
                     <h1>Interconnectivity of trades between countries</h1>
                 </div>
                 <VizWrapper type="Chord">
-                    <div>
                         {chordDiagram}
+                    <div className={classes.TimeSlider}>
                         <TimeSlider 
                             from={from} 
                             to={to}  

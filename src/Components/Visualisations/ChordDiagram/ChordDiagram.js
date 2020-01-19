@@ -7,6 +7,7 @@ import ReactTooltip from 'react-tooltip';
 import Arc from './ChordComponents/Arc';
 import classes from './ChordDiagram.module.css';
 import Ribbon from './ChordComponents/Ribbon';
+import ExitEntrySelector from '../../../Components/Selector/ExitEntrySelector/ExitEntrySelector';
 
 class ChordDiagram extends React.Component {
     state = {
@@ -20,11 +21,19 @@ class ChordDiagram extends React.Component {
     arcTooltip = dataTip => {
         if (!dataTip) return "";
         const [id, name, description] = dataTip.split("|");
-        let value = parseFloat(description)
-            .toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        let value = parseFloat(description).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+        let enterExit;
+
+        if ( this.props.exitEnterValue === "entry") {
+            enterExit = "entered";
+        }else{
+            enterExit= "exited"
+        }
         return description ? (
-            <p>Financing for<span><br/>{id}. {name}</span><br/>
-                Value : {value}M USD</p>
+            <p><span>{name}</span><br/>
+                Total MM3 of Gas {enterExit} : <br/>
+                <span>{value} MM3</span></p>
         ) : null;
     };
     
@@ -137,8 +146,11 @@ class ChordDiagram extends React.Component {
             for(let j = 0; j < dataLength; j++) {
                 concatData.forEach(el => {
                     if (43 * i + j === el.ID){
-                        fuelData[i].data[j] = el.Value
-                        // fuelData[j].data[i] = el.Value
+                        if ( this.props.exitEnterValue === 'entry'){
+                            fuelData[j].data[i] = el.Value
+                        } else {
+                            fuelData[i].data[j] = el.Value
+                        }
                     } 
                 })
             }
@@ -198,8 +210,11 @@ class ChordDiagram extends React.Component {
         }
         return (
             <div className={classes.ChordDiagram}>
-                <svg width="100%" height="100%" viewBox={`0 0 400 400`}>
-                    <g transform={`translate(${400 / 2}, ${400 / 2})`}>
+                <ExitEntrySelector
+                    exitEntryHandler={this.props.exitEntryHandler}
+                    value={this.props.exitEnterValue}/> 
+                <svg width="100%" height="100%" viewBox={`0 0 400 330`}>
+                    <g transform={`translate(${400 / 2}, ${330 / 2})`}>
                         {renderArc}
                         {renderRibbon}
                     </g>

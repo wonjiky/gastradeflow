@@ -3,7 +3,7 @@
     height: 8px;
     z-index: 1;
     margin-top: 16px;
-    background-color: #7d7d7d;
+    background-color: #00d885;
     border-radius: 5;
     cursor: pointer
 }
@@ -23,7 +23,7 @@
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
     background-color: white;
-    border: 6px solid #7d7d7d;
+    border: 6px solid #00d885;
     transition: transform .1s ease-in-out;
     -webkit-transition: transform .1s ease-in-out;
     -moz-transition: transform .1s ease-in-out;
@@ -44,6 +44,7 @@
 }
 
 .Ticks {
+    
     position: absolute;
     padding-right: 1px;
     padding-left: -1px;
@@ -55,8 +56,9 @@
 }
 
 .TicksLabel {
+    font-family: "Roboto";
     position: absolute;
-    margin-top: 29px;
-    font-size: .8rem;
+    margin-top: 35px;
+    font-size: .6rem;
     text-align: center;
 }

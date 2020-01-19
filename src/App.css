@@ -31,3 +31,19 @@
     transform: rotate(360deg);
   }
 } */
+
+.Tooltip{ 
+  max-width: 200px;
+  background-color:#01ff9d !important;
+  color: black !important;
+  border-radius: 0 !important;
+  padding: 5px 5px;
+}
+
+.Tooltip span {
+  font-weight: 600;
+  font-size: .9rem;
+}
+.Tooltip p {
+  font-size: .8rem !important;
+}
