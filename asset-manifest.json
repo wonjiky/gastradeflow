@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/gastradeflow/static/css/main.43678266.chunk.css",
-    "main.js": "/gastradeflow/static/js/main.daa62777.chunk.js",
-    "main.js.map": "/gastradeflow/static/js/main.daa62777.chunk.js.map",
+    "main.css": "/gastradeflow/static/css/main.5ef0bffb.chunk.css",
+    "main.js": "/gastradeflow/static/js/main.e1201373.chunk.js",
+    "main.js.map": "/gastradeflow/static/js/main.e1201373.chunk.js.map",
     "runtime-main.js": "/gastradeflow/static/js/runtime-main.e644e28e.js",
     "runtime-main.js.map": "/gastradeflow/static/js/runtime-main.e644e28e.js.map",
-    "static/js/2.90fbd38a.chunk.js": "/gastradeflow/static/js/2.90fbd38a.chunk.js",
-    "static/js/2.90fbd38a.chunk.js.map": "/gastradeflow/static/js/2.90fbd38a.chunk.js.map",
+    "static/js/2.a6ae0e72.chunk.js": "/gastradeflow/static/js/2.a6ae0e72.chunk.js",
+    "static/js/2.a6ae0e72.chunk.js.map": "/gastradeflow/static/js/2.a6ae0e72.chunk.js.map",
     "index.html": "/gastradeflow/index.html",
-    "precache-manifest.52f7ba3a0263eee8e073ac7adb5d3758.js": "/gastradeflow/precache-manifest.52f7ba3a0263eee8e073ac7adb5d3758.js",
+    "precache-manifest.441261a51f4e08ded90710e2e8ccc914.js": "/gastradeflow/precache-manifest.441261a51f4e08ded90710e2e8ccc914.js",
     "service-worker.js": "/gastradeflow/service-worker.js",
-    "static/css/main.43678266.chunk.css.map": "/gastradeflow/static/css/main.43678266.chunk.css.map",
-    "static/js/2.90fbd38a.chunk.js.LICENSE": "/gastradeflow/static/js/2.90fbd38a.chunk.js.LICENSE"
+    "static/css/main.5ef0bffb.chunk.css.map": "/gastradeflow/static/css/main.5ef0bffb.chunk.css.map",
+    "static/js/2.a6ae0e72.chunk.js.LICENSE": "/gastradeflow/static/js/2.a6ae0e72.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.e644e28e.js",
-    "static/js/2.90fbd38a.chunk.js",
-    "static/css/main.43678266.chunk.css",
-    "static/js/main.daa62777.chunk.js"
+    "static/js/2.a6ae0e72.chunk.js",
+    "static/css/main.5ef0bffb.chunk.css",
+    "static/js/main.e1201373.chunk.js"
   ]
 }
