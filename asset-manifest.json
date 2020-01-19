@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/gastradeflow/static/css/main.97a16058.chunk.css",
-    "main.js": "/gastradeflow/static/js/main.b46289cf.chunk.js",
-    "main.js.map": "/gastradeflow/static/js/main.b46289cf.chunk.js.map",
+    "main.js": "/gastradeflow/static/js/main.f997e509.chunk.js",
+    "main.js.map": "/gastradeflow/static/js/main.f997e509.chunk.js.map",
     "runtime-main.js": "/gastradeflow/static/js/runtime-main.e644e28e.js",
     "runtime-main.js.map": "/gastradeflow/static/js/runtime-main.e644e28e.js.map",
-    "static/js/2.731c8ccf.chunk.js": "/gastradeflow/static/js/2.731c8ccf.chunk.js",
-    "static/js/2.731c8ccf.chunk.js.map": "/gastradeflow/static/js/2.731c8ccf.chunk.js.map",
+    "static/js/2.2fc3f850.chunk.js": "/gastradeflow/static/js/2.2fc3f850.chunk.js",
+    "static/js/2.2fc3f850.chunk.js.map": "/gastradeflow/static/js/2.2fc3f850.chunk.js.map",
     "index.html": "/gastradeflow/index.html",
-    "precache-manifest.dd3ec1381ead230343f122e670af6b7b.js": "/gastradeflow/precache-manifest.dd3ec1381ead230343f122e670af6b7b.js",
+    "precache-manifest.47c0f419d49b8d46402d78078d6a5eca.js": "/gastradeflow/precache-manifest.47c0f419d49b8d46402d78078d6a5eca.js",
     "service-worker.js": "/gastradeflow/service-worker.js",
     "static/css/main.97a16058.chunk.css.map": "/gastradeflow/static/css/main.97a16058.chunk.css.map",
-    "static/js/2.731c8ccf.chunk.js.LICENSE": "/gastradeflow/static/js/2.731c8ccf.chunk.js.LICENSE"
+    "static/js/2.2fc3f850.chunk.js.LICENSE": "/gastradeflow/static/js/2.2fc3f850.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.e644e28e.js",
-    "static/js/2.731c8ccf.chunk.js",
+    "static/js/2.2fc3f850.chunk.js",
     "static/css/main.97a16058.chunk.css",
-    "static/js/main.b46289cf.chunk.js"
+    "static/js/main.f997e509.chunk.js"
   ]
 }
