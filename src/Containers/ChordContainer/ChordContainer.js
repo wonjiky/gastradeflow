@@ -60,7 +60,7 @@ class ChordContainer extends React.Component {
 
         return (
             <ContainerLayout>
-                <div>
+                <div className={classes.ChordsLayout}>
                     <h1>Interconnectivity of trades between countries</h1>
                 </div>
                 <VizWrapper type="Chord">
