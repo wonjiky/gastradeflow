@@ -50,6 +50,9 @@ class ChordContainer extends React.Component {
 
         return (
             <ContainerLayout>
+                <div>
+                    <h1>Interconnectivity of trades between countries</h1>
+                </div>
                 <VizWrapper type="Chord">
                     <div>
                         {chordDiagram}

@@ -47,7 +47,7 @@ const Arc = props => {
                                         <path
                                             className='arcs'
                                             d={innerArcPath(state)}
-                                            // fill={data.props.COLOR}
+                                            fill={data.props.COLOR}
                                             opacity={0.9}
                                             onMouseOver={
                                                 function() {
@@ -72,7 +72,7 @@ const Arc = props => {
                                             data-for="ChordArc" 
                                             /> 
                                         <text
-                                            fontSize="5px"
+                                            fontSize="3px"
                                             fill="#000"
                                             transform={`translate(${p2.toString()})`}
                                             textAnchor={mid(state) ? "start" : "end"}

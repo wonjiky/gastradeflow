@@ -36,7 +36,7 @@ class LineGraphContainer extends React.Component {
     render() {
         const { data } = this.props;
         let countryList = [];
-        let heading = <h1>Gas Trade<br/>Flow</h1>,
+        let heading = <h1>Gas Trade Flow</h1>,
         body = <p>The Gas Trade Flow shows the flow of gas transacations within Europe.</p>
         let datum = [ ...data ];
 
@@ -68,11 +68,6 @@ class LineGraphContainer extends React.Component {
             return (
                 <div className={classes.LineGraphContainer}>
                     <ContainerLayout>
-                        <TextWrapper 
-                            Heading={heading}
-                            Body={body}
-                            type="Line"
-                        />
                         <VizWrapper type="Line">
                             <LineGraph
                                 options={list}
@@ -84,6 +79,11 @@ class LineGraphContainer extends React.Component {
                                 handler={this.handler}
                                 />
                         </VizWrapper>
+                        <TextWrapper 
+                            Heading={heading}
+                            Body={body}
+                            type="Line"
+                        />
                     </ContainerLayout>
                 </div>
             );

@@ -8,7 +8,7 @@ const selector = props => {
         <Select 
             className={classes.Selector}
             isClearable={props.isClearable}
-            // styles={styled}
+            styles={styles}
             isSearchable={props.searchable}
             value={props.selectorValue}
             // backspaceRemovesValue={props.backspace}
@@ -21,8 +21,8 @@ const selector = props => {
                 colors: {
                   ...theme.colors,
                   primary25: '#e3e3e3',
-                  primary50: '#449999',
-                  primary: '#449999',
+                  primary50: '#00d885',
+                  primary: '#00d885',
                 },
               })}
         />
@@ -30,3 +30,53 @@ const selector = props => {
 }
 
 export default selector;
+
+const styles = {
+    indicatorSeparator: (base, state) => {
+
+    },
+    menu: (base, state) => {
+        return {
+            ...base,
+            backgroundColor: "#01ff9d",
+            // opacity: ".9"
+        }
+    },
+    dropdownIndicator: (base, state) => {
+      return { ...base,
+        color: 'white',
+        "&:hover": {
+        //   color: '#449999',
+        }
+      };
+    },
+    control: (base, state) => {
+      return { ...base, 
+        boxShadow: 'none',
+        backgroundColor: 'none',
+        borderStyle: 'solid', 
+        borderColor: '#449999',
+        borderWidth: '0px',
+        borderBottom: '3px solid white',
+        color: 'none', 
+        "&:hover": { 
+        }
+      };
+    },
+    singleValue: (base, state) => {
+      return {
+        ...base,
+        fontSize:'2rem',
+        fontWeight:'600',
+        color: 'white'
+      }
+    },
+    input: (base, state) => {
+      return {
+        ...base,
+        fontSize:'2rem',
+        fontWeight:'900',
+        color: 'white'
+      }
+    }
+};

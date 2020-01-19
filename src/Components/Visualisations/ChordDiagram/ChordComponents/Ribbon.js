@@ -6,7 +6,7 @@ const Ribbon = ({data, ribbon, meta, arcIndex, innerRadius }) => {
 
     const [mouseOver, mouseOverHandler] = useState({ selected: false, selectedIndex: null });
     //Define defs
-    // let defs = createLinearGradient(data, innerRadius, meta);
+    let defs = createLinearGradient(data, innerRadius, meta);
     return (
         <NodeGroup
             data={data}
@@ -47,7 +47,7 @@ const Ribbon = ({data, ribbon, meta, arcIndex, innerRadius }) => {
             {nodes => {
                 return (
                     <g id="ribbons">
-                        {/* {defs} */}
+                        {defs}
                         {nodes.map(({ key, data, state }) => {
                             return (
                                 data.value === 0 ? null : <path 
@@ -55,8 +55,6 @@ const Ribbon = ({data, ribbon, meta, arcIndex, innerRadius }) => {
                                     key={key} 
                                     data-tip={
                                         `
-                                        ${meta[data.source.index].props.NAME}|
-                                        ${meta[data.source.subindex].props.NAME}|
                                         ${data.source.index + 1}|
                                         ${data.source.subindex + 1}|
                                         ${data.source.value}|
@@ -71,7 +69,7 @@ const Ribbon = ({data, ribbon, meta, arcIndex, innerRadius }) => {
                                         ...prevState, selected: false, selectedIndex: null
                                     }))} 
                                     fill={"black"} 
-                                    // fill={`url(#Ribbon-${data.source.index}-${data.target.index})`} 
+                                    fill={`url(#Ribbon-${data.source.index}-${data.target.index})`} 
                                     opacity={ 
                                         (mouseOver.selected === true && mouseOver.selectedIndex !== null && mouseOver.selectedIndex === key) || 
                                         ( (parseInt(arcIndex) === data.source.index) || (parseInt(arcIndex) === data.source.subindex) ) ? 1 : .2} 
@@ -100,7 +98,7 @@ const createLinearGradient = (data, innerRadius, meta) => {
                         key={i}
                         ribbon={ribbon}
                         innerRadius={innerRadius}
-                        // fill={[meta[fillIndex.source].color, meta[fillIndex.target].color]}
+                        fill={[meta[fillIndex.source].color, meta[fillIndex.target].color]}
                     />
                 )
             })}

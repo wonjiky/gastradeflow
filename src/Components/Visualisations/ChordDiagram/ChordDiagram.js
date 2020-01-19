@@ -59,6 +59,52 @@ class ChordDiagram extends React.Component {
         const innerRadius = 130, outerRadius = 135;
         const dataFilteredByYear = data.filter(d => d.Year >= from && d.Year <= to);
 
+        let fuelProps = [
+            {"ID": 1, "color": "red"  },
+            {"ID": 2, "color": "darkblue"  },
+            {"ID": 3, "color": "lightblue"  },
+            {"ID": 4, "color": "lightcoral"  },
+            {"ID": 5, "color": "darkcyan"  },
+            {"ID": 6, "color": "yellowgreen"  },
+            {"ID": 7, "color": "goldenrod"  },
+            {"ID": 8, "color": "mediumvioletred"  },
+            {"ID": 9, "color": "mediumaquamarine"  },
+            {"ID": 10, "color": "gray"  },
+            {"ID": 11, "color": "violet"  },
+            {"ID": 12, "color": "rebeccapurple"  },
+            {"ID": 13, "color": "#449999"  },
+            {"ID": 14, "color": "yellow"  },
+            {"ID": 15, "color": "rosybrown"  },
+            {"ID": 16, "color": "mediumslatebue"},
+            {"ID": 17, "color": "palevioletred"  },
+            {"ID": 18, "color": "darkslategrey"  },
+            {"ID": 19, "color": "palegoldenrod"  },
+            {"ID": 20, "color": "darkkhaki"  },
+            {"ID": 21, "color": "darkcyan"  },
+            {"ID": 22, "color": "darkslateblue"  },
+            {"ID": 23, "color": "greenyellow"  },
+            {"ID": 24, "color": "papayawhip"  },
+            {"ID": 25, "color": "midnightblue"  },
+            {"ID": 26, "color": "wheat"  },
+            {"ID": 27, "color": "aquamarine"  },
+            {"ID": 28, "color": "palegreen"  },
+            {"ID": 29, "color": "plum"  },
+            {"ID": 30, "color": "sienna"  },
+            {"ID": 31, "color": "peachpuff"  },
+            {"ID": 32, "color": "pru"},
+            {"ID": 33, "color": "burlywood"  },
+            {"ID": 34, "color": "khaki"  },
+            {"ID": 35, "color": "aqua"  },
+            {"ID": 36, "color": "lightseagreen"  },
+            {"ID": 37, "color": "bisque"  },
+            {"ID": 38, "color": "royalblue"  },
+            {"ID": 39, "color": "gainsboro"  },
+            {"ID": 40, "color": "honeydew"  },
+            {"ID": 41, "color": "salmon"  },
+            {"ID": 42, "color": "brown"  },
+            {"ID": 43, "color": "blanchedalmond"},
+        ];
+
         function mid(d) {
             return Math.PI > (d.endAngle + d.startAngle) / 2 
         }
@@ -112,7 +158,7 @@ class ChordDiagram extends React.Component {
                 props: {
                     ID: dataFilteredByYear[i].ID,
                     NAME: dataFilteredByYear[i].Entry,
-                    // COLOR: sdgProp[i].color,
+                    COLOR: fuelProps[i].color,
                 },
                 ...d
             }
@@ -126,7 +172,6 @@ class ChordDiagram extends React.Component {
         //     .value()
 
         //     console.log(metaProps);
-      
         let renderArc, renderRibbon = null;
         if ( datas !== 0 ) {
             renderArc = (
@@ -144,7 +189,7 @@ class ChordDiagram extends React.Component {
                 <Ribbon 
                     data={[...chordData]}
                     ribbon={ribbons}
-                    meta={chordData.groups}
+                    meta={fuelProps}
                     arcIndex={this.state.arcIndex}
                     arcHovered={this.state.arcHovered}
                     innerRadius={125}

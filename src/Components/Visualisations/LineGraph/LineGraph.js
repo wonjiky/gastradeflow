@@ -7,18 +7,20 @@ import ExitEntrySelector from '../../Selector/ExitEntrySelector/ExitEntrySelecto
 const lineGraph = props => {
     const { options, defaultValue, selectorValue, data, exitEnterValue } = props;
     let lineChart = (
-        <LineChart width={480} height={200} data={data}
+        <LineChart width={1024} height={200} data={data}
             margin={{top: 10, right: 20, left: 20, bottom: 10}}
             >
             <XAxis strokeWidth="1px" stroke={'black'} tick={{fontSize: '11px'}} dataKey={'year'} />
             <YAxis hide={true}tick={{fontSize: '12px'}} type="number" domain={[0, 'dataMax']} />
             <Tooltip cursor={{ strokeWidth: 0 }} content={renderTooltip} />
-            <Line type="monotone" dataKey="value" strokeWidth="2px" stroke={'black'} fill="mediumspringgreen" activeDot={{r: 8}}/>
+            <Line type="monotone" dataKey="value" strokeWidth="2px" stroke={'black'} fill="#00d885" activeDot={{r: 8}}/>
         </LineChart>
     )
 
     return (
         <div className={classes.LineGraph}>
+
+            {lineChart}
             <ExitEntrySelector 
                 exitEntryHandler={props.exitEntryHandler}
                 value={exitEnterValue}
@@ -29,7 +31,6 @@ const lineGraph = props => {
                 selectorValue={selectorValue}
                 handler={props.handler}
             />
-            {lineChart}
         </div>
     );
 }
@@ -43,7 +44,7 @@ const renderTooltip = props => {
             <p className={classes.Tooltip}>
                 {payload.year}
                 <br/><span>
-                    Value : {parseFloat(payload.value).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} M USD
+                    Total of {parseFloat(payload.value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} MM3
                 </span>
             </p>
         )
