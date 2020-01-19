@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/gastradeflow/precache-manifest.48eadef10a4429a1a2a246cbcd254a4f.js"
+  "/gastradeflow/precache-manifest.ebd835b0360a2dc353cf49cb30f5c4dc.js"
 );
 
 self.addEventListener('message', (event) => {
