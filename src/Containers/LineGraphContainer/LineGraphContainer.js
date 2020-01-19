@@ -37,7 +37,8 @@ class LineGraphContainer extends React.Component {
         const { data } = this.props;
         let countryList = [];
         let heading = <h1>Gas Trade Flow</h1>,
-        body = <p>The Gas Trade Flow shows the flow of gas transacations within Europe.</p>
+        body = <p>Visualising the gas trade flows in Europe between 2008-2019.
+            <br/>This platform delves into each country's annual flows as well depicts the interconnectivity between the countries.</p>
         let datum = [ ...data ];
 
         let list = countries.entry;
