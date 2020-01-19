@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fa539dff36fe691f2d5c3b7ee18a3fde",
+    "revision": "2ab9630721e23a7f26f6bc09cad1b5c7",
     "url": "/gastradeflow/index.html"
   },
   {
-    "revision": "902fd471cd7d62e9951c",
+    "revision": "3dee3f2249f8f06edee7",
     "url": "/gastradeflow/static/css/main.84f78edf.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gastradeflow/static/js/2.c0bb4b27.chunk.js.LICENSE"
   },
   {
-    "revision": "902fd471cd7d62e9951c",
-    "url": "/gastradeflow/static/js/main.1676857c.chunk.js"
+    "revision": "3dee3f2249f8f06edee7",
+    "url": "/gastradeflow/static/js/main.253b871a.chunk.js"
   },
   {
     "revision": "b95aaed126c09ccc32be",
