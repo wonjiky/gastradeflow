@@ -33,7 +33,7 @@
 } */
 
 .Tooltip{ 
-  max-width: 200px;
+  max-width: 300px;
   background-color:#01ff9d !important;
   color: black !important;
   border-radius: 0 !important;
@@ -46,4 +46,9 @@
 }
 .Tooltip p {
   font-size: .8rem !important;
+}
+
+.Tooltip h5{
+  font-size: 1.2rem;
+  margin:0;
 }

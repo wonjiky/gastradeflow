@@ -49,12 +49,15 @@ const Ribbon = ({data, ribbon, meta, arcIndex, innerRadius }) => {
                     <g id="ribbons">
                         {defs}
                         {nodes.map(({ key, data, state }) => {
+                            console.log(data);
                             return (
                                 data.value === 0 ? null : <path 
                                     id='ribbons'
                                     key={key} 
                                     data-tip={
                                         `
+                                        ${meta[data.source.index].NAME}|
+                                        ${meta[data.source.subindex].NAME}|
                                         ${data.source.index + 1}|
                                         ${data.source.subindex + 1}|
                                         ${data.source.value}|

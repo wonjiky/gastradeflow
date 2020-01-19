@@ -3,7 +3,6 @@ import classes from './ExitEntrySelector.module.css';
 
 
 const exitEntrySelector = props => {
-    console.log(props);
     return (
         <form className={classes.Selector}>
             <input type="radio" value="entry" checked={props.value === "entry"}

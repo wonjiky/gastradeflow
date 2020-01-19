@@ -33,7 +33,7 @@ class ChordDiagram extends React.Component {
         return description ? (
             <p><span>{name}</span><br/>
                 Total MM3 of Gas {enterExit} : <br/>
-                <span>{value} MM3</span></p>
+                <h5>{value} MM3</h5></p>
         ) : null;
     };
     
@@ -53,7 +53,18 @@ class ChordDiagram extends React.Component {
         //     );
         // }
 
-        let result = (<p>{indexName} : {entryValue} <br/> {subindexName}: {exitValue}</p>)
+        
+        let result = (
+            <p><span>{subindexName}</span> to <span>{indexName}</span> : <br/>
+            <h5>{entryValue} MM3</h5>
+            <br/>
+            <span>{indexName}</span> to <span>{subindexName}</span> : <br/>
+            <h5>{exitValue} MM3</h5>
+             </p>
+        )
+
+
+        // let result = (<p>{indexName} : {entryValue} <br/> {subindexName}: {exitValue}</p>)
     
         return indexName ? result : null;
     }
@@ -69,49 +80,49 @@ class ChordDiagram extends React.Component {
         const dataFilteredByYear = data.filter(d => d.Year >= from && d.Year <= to);
 
         let fuelProps = [
-            {"ID": 1, "color": "red"  },
-            {"ID": 2, "color": "darkblue"  },
-            {"ID": 3, "color": "lightblue"  },
-            {"ID": 4, "color": "lightcoral"  },
-            {"ID": 5, "color": "darkcyan"  },
-            {"ID": 6, "color": "yellowgreen"  },
-            {"ID": 7, "color": "goldenrod"  },
-            {"ID": 8, "color": "mediumvioletred"  },
-            {"ID": 9, "color": "mediumaquamarine"  },
-            {"ID": 10, "color": "gray"  },
-            {"ID": 11, "color": "violet"  },
-            {"ID": 12, "color": "rebeccapurple"  },
-            {"ID": 13, "color": "#449999"  },
-            {"ID": 14, "color": "yellow"  },
-            {"ID": 15, "color": "rosybrown"  },
-            {"ID": 16, "color": "mediumslatebue"},
-            {"ID": 17, "color": "palevioletred"  },
-            {"ID": 18, "color": "darkslategrey"  },
-            {"ID": 19, "color": "palegoldenrod"  },
-            {"ID": 20, "color": "darkkhaki"  },
-            {"ID": 21, "color": "darkcyan"  },
-            {"ID": 22, "color": "darkslateblue"  },
-            {"ID": 23, "color": "greenyellow"  },
-            {"ID": 24, "color": "papayawhip"  },
-            {"ID": 25, "color": "midnightblue"  },
-            {"ID": 26, "color": "wheat"  },
-            {"ID": 27, "color": "aquamarine"  },
-            {"ID": 28, "color": "palegreen"  },
-            {"ID": 29, "color": "plum"  },
-            {"ID": 30, "color": "sienna"  },
-            {"ID": 31, "color": "peachpuff"  },
-            {"ID": 32, "color": "pru"},
-            {"ID": 33, "color": "burlywood"  },
-            {"ID": 34, "color": "khaki"  },
-            {"ID": 35, "color": "aqua"  },
-            {"ID": 36, "color": "lightseagreen"  },
-            {"ID": 37, "color": "bisque"  },
-            {"ID": 38, "color": "royalblue"  },
-            {"ID": 39, "color": "gainsboro"  },
-            {"ID": 40, "color": "honeydew"  },
-            {"ID": 41, "color": "salmon"  },
-            {"ID": 42, "color": "brown"  },
-            {"ID": 43, "color": "blanchedalmond"},
+            {"ID": 1,  "NAME": "Algeria", "color": "red"  },
+            {"ID": 2,  "NAME": "Austria", "color": "darkblue"  },
+            {"ID": 3,  "NAME": "Belarus", "color": "lightblue"  },
+            {"ID": 4,  "NAME": "Belgium", "color": "lightcoral"  },
+            {"ID": 5,  "NAME": "Bulgaria", "color": "darkcyan"  },
+            {"ID": 6,  "NAME": "Croatia", "color": "yellowgreen"  },
+            {"ID": 7,  "NAME": "Czech Republic", "color": "goldenrod"  },
+            {"ID": 8,  "NAME": "Denmark", "color": "mediumvioletred"  },
+            {"ID": 9,  "NAME": "Estonia", "color": "mediumaquamarine"  },
+            {"ID": 10, "NAME": "Finland",  "color": "gray"  },
+            {"ID": 11, "NAME": "France",  "color": "violet"  },
+            {"ID": 12, "NAME": "Georgia",  "color": "rebeccapurple"  },
+            {"ID": 13, "NAME": "Germany",  "color": "#449999"  },
+            {"ID": 14, "NAME": "Greece",  "color": "yellow"  },
+            {"ID": 15, "NAME": "Hungary",  "color": "rosybrown"  },
+            {"ID": 16, "NAME": "Iran",  "color": "mediumslatebue"},
+            {"ID": 17, "NAME": "Ireland",  "color": "palevioletred"  },
+            {"ID": 18, "NAME": "Isle of Man",  "color": "darkslategrey"  },
+            {"ID": 19, "NAME": "Italy",  "color": "palegoldenrod"  },
+            {"ID": 20, "NAME": "Latvia",  "color": "darkkhaki"  },
+            {"ID": 21, "NAME": "Libya",  "color": "darkcyan"  },
+            {"ID": 22, "NAME": "Liquefied Natural Gas",  "color": "darkslateblue"  },
+            {"ID": 23, "NAME": "Lithuania",  "color": "greenyellow"  },
+            {"ID": 24, "NAME": "Luxembourg",  "color": "papayawhip"  },
+            {"ID": 25, "NAME": "Macedonia, Former Yugoslav Republic",  "color": "midnightblue"  },
+            {"ID": 26, "NAME": "Moldova",  "color": "wheat"  },
+            {"ID": 27, "NAME": "Morocco",  "color": "aquamarine"  },
+            {"ID": 28, "NAME": "Netherlands",  "color": "palegreen"  },
+            {"ID": 29, "NAME": "Norway",  "color": "plum"  },
+            {"ID": 30, "NAME": "Poland",  "color": "sienna"  },
+            {"ID": 31, "NAME": "Portugal",  "color": "peachpuff"  },
+            {"ID": 32, "NAME": "Romania",  "color": "pru"},
+            {"ID": 33, "NAME": "Russia",  "color": "burlywood"  },
+            {"ID": 34, "NAME": "Serbia",  "color": "khaki"  },
+            {"ID": 35, "NAME": "Slovak Republic",  "color": "aqua"  },
+            {"ID": 36, "NAME": "Slovenia",  "color": "lightseagreen"  },
+            {"ID": 37, "NAME": "Spain",  "color": "bisque"  },
+            {"ID": 38, "NAME": "Sweden",  "color": "royalblue"  },
+            {"ID": 39, "NAME": "Switzerland",  "color": "gainsboro"  },
+            {"ID": 40, "NAME": "Tunisia",  "color": "honeydew"  },
+            {"ID": 41, "NAME": "Turkey",  "color": "salmon"  },
+            {"ID": 42, "NAME": "Ukraine",  "color": "brown"  },
+            {"ID": 43, "NAME": "United Kingdom",  "color": "blanchedalmond"},
         ];
 
         function mid(d) {
@@ -155,7 +166,6 @@ class ChordDiagram extends React.Component {
                 })
             }
         }
-
         let datas = _.chain(fuelData)
 			.map(u => u.dataFilteredByYear)
 			.flatten()
@@ -176,14 +186,6 @@ class ChordDiagram extends React.Component {
             }
         })
 
-        // let metaProps = _.chain(dataFilteredByYear)
-        //     .groupBy('Entry')
-        //     .map(objs => ({
-        //         "ID": 
-        //     }))
-        //     .value()
-
-        //     console.log(metaProps);
         let renderArc, renderRibbon = null;
         if ( datas !== 0 ) {
             renderArc = (

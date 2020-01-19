@@ -21,10 +21,15 @@ const lineGraph = props => {
         <div className={classes.LineGraph}>
 
             {lineChart}
-            <ExitEntrySelector 
-                exitEntryHandler={props.exitEntryHandler}
-                value={exitEnterValue}
-                />
+            <div className={classes.ExitEntry}>
+                <ExitEntrySelector 
+                    exitEntryHandler={props.exitEntryHandler}
+                    value={exitEnterValue}
+                    />
+                <p>
+                    * Gas measured at Standard Conditions - 15 degrees Celsius and at 760 mm Hg. The data were not fully collected in the time period Apr-Sep 2009 	
+                </p>
+            </div>
             <Selector 
                 options={options} 
                 defaultValue={defaultValue}
