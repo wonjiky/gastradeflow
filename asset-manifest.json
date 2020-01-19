@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/gastradeflow/static/css/main.84f78edf.chunk.css",
+    "main.js": "/gastradeflow/static/js/main.1676857c.chunk.js",
+    "main.js.map": "/gastradeflow/static/js/main.1676857c.chunk.js.map",
+    "runtime-main.js": "/gastradeflow/static/js/runtime-main.e644e28e.js",
+    "runtime-main.js.map": "/gastradeflow/static/js/runtime-main.e644e28e.js.map",
+    "static/js/2.c0bb4b27.chunk.js": "/gastradeflow/static/js/2.c0bb4b27.chunk.js",
+    "static/js/2.c0bb4b27.chunk.js.map": "/gastradeflow/static/js/2.c0bb4b27.chunk.js.map",
+    "index.html": "/gastradeflow/index.html",
+    "precache-manifest.34ffe7dfa051704e006da4ac70a53d8b.js": "/gastradeflow/precache-manifest.34ffe7dfa051704e006da4ac70a53d8b.js",
+    "service-worker.js": "/gastradeflow/service-worker.js",
+    "static/css/main.84f78edf.chunk.css.map": "/gastradeflow/static/css/main.84f78edf.chunk.css.map",
+    "static/js/2.c0bb4b27.chunk.js.LICENSE": "/gastradeflow/static/js/2.c0bb4b27.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e644e28e.js",
+    "static/js/2.c0bb4b27.chunk.js",
+    "static/css/main.84f78edf.chunk.css",
+    "static/js/main.1676857c.chunk.js"
+  ]
+}
