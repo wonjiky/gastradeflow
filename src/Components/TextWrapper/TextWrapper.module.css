@@ -1,0 +1,19 @@
+.Chord {
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: lightseagreen;
+}
+
+.Line {
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: lightseagreen;
+}
+
+.TextWrapper h1 {
+    font-weight: 600;
+}

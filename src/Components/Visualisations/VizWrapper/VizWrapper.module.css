@@ -1,0 +1,10 @@
+.Chord {
+    display: flex;
+    flex-flow: column;
+    width: 30%;
+}
+.Line {
+    display: flex;
+    flex-flow: column;
+    width: 30%;
+}

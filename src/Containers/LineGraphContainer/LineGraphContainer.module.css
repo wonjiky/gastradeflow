@@ -1,0 +1,12 @@
+.LineGraphContainer {
+    font-family: 'Roboto';
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    height: 600px;
+    background-color: mediumspringgreen;
+}
+
+.LineGraphContainer h1 {
+    margin: 0;
+}

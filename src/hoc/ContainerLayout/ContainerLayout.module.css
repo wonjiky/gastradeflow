@@ -1,0 +1,8 @@
+.ContainerLayout {
+    display: flex;
+    flex-flow: row;
+    margin: 0 auto;
+    width: 70%;
+    min-width: 1024px;
+    max-width: 1400px;
+}
