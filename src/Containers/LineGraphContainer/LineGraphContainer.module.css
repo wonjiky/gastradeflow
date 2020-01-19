@@ -1,5 +1,5 @@
 .LineGraphContainer {
-    /* font-family: 'Roboto'; */
+    font-family: 'Roboto';
     display: flex;
     flex-flow: row;
     width: 100%;
